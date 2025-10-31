@@ -1,0 +1,156 @@
+/* styles.css */
+/* ——— Base ——— */
+:root{
+  --bg: #0a0a0a;
+  --text: #f5f5f7;
+  --muted: #a1a1a6;
+  --card: #111114;
+  --accent: #6ae3ff;
+  --accent-2: #7f4cff;
+  --ring: 48,133,255;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1000px 600px at 80% -20%, rgba(122,86,255,.25), transparent 60%),
+              radial-gradient(900px 500px at -10% 10%, rgba(106,227,255,.18), transparent 60%),
+              var(--bg);
+  color: var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.container{max-width:1100px;margin-inline:auto;padding: clamp(16px, 3vw, 32px)}
+
+/* ——— Nav ——— */
+.site-nav{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: saturate(180%) blur(8px);
+  background: rgba(10,10,10,.6);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.site-nav .container{display:flex; align-items:center; gap:16px}
+.brand{font-weight:700; letter-spacing:.5px; text-decoration:none; color:var(--text)}
+.site-nav nav{margin-left:auto; display:flex; gap: clamp(10px, 2vw, 24px)}
+.site-nav nav a{color:var(--muted); text-decoration:none; font-weight:500}
+.site-nav nav a:hover,.site-nav nav a:focus{color:var(--text)}
+.site-nav nav .cta{
+  color:var(--text); padding:.5rem .9rem; border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+}
+.mode-toggle{
+  background:transparent; border:1px solid rgba(255,255,255,.12);
+  color:var(--text); padding:.45rem .6rem; border-radius:999px; cursor:pointer;
+}
+.mode-toggle .sun{display:none}
+html.light .mode-toggle .sun{display:inline}
+html.light .mode-toggle .moon{display:none}
+
+/* ——— Hero ——— */
+.hero{
+  position:relative; overflow:hidden;
+  padding: clamp(64px, 15vh, 200px) 0;
+}
+.hero-inner{position:relative}
+.kicker{color:var(--muted); text-transform:uppercase; letter-spacing:.18em; font-size:.9rem}
+.display{
+  font-weight:800; line-height:.9;
+  font-size: clamp(48px, 10vw, 140px);
+  margin: .2em 0 .2em;
+  letter-spacing:-.02em;
+}
+.sub{max-width:60ch; font-size: clamp(16px, 1.2vw, 20px); color:#d0d0d4}
+.cta-row{display:flex; gap:12px; margin-top:16px}
+.btn{display:inline-block; text-decoration:none; padding:.9rem 1.1rem; border-radius:16px; font-weight:600; border:1px solid rgba(255,255,255,.14)}
+.btn.primary{background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#0b0b0f; border:none; box-shadow: 0 10px 30px rgba(127,76,255,.25)}
+.btn.ghost{color:var(--text)}
+
+/* iPhone silhouette */
+.device-frame{ position:absolute; inset:auto 0 -120px auto; display:flex; justify-content:flex-end; pointer-events:none; }
+.iphone{ width:min(55vw, 400px); filter: drop-shadow(0 30px 60px rgba(0,0,0,.55));}
+.iphone .body{ fill:#0d0d10; stroke:#696c75; stroke-width:1.2; }
+.iphone .screen{ fill:url(#g1); }
+.iphone defs stop:first-child{ stop-color:#110f1a; }
+.iphone defs stop:last-child{ stop-color:#1a1b25; }
+.iphone .notch{ fill:#1f1f29; }
+
+/* ——— Sections ——— */
+.panel{padding: clamp(48px, 12vh, 120px) 0}
+.panel.alt{background: linear-gradient(180deg, rgba(255,255,255,.02), transparent)}
+.panel--grid .grid.two{display:grid; grid-template-columns: 1.2fr 1fr; gap: clamp(16px, 4vw, 40px)}
+.eyebrow{color:var(--muted); text-transform:uppercase; letter-spacing:.2em; font-size:.85rem; margin:0 0 6px}
+.title{font-size: clamp(22px, 3vw, 32px); margin:.2em 0 0}
+.soft{color:#bfbfd6; font-weight:600}
+.card-list{display:grid; grid-template-columns:1fr; gap:12px}
+.card{
+  background: var(--card);
+  border:1px solid rgba(255,255,255,.08);
+  padding:18px; border-radius:18px;
+}
+.badges{display:flex; flex-wrap:wrap; gap:8px; padding-left:0; list-style:none}
+.badges li{background:#17171b; border:1px solid rgba(255,255,255,.06); padding:.35rem .6rem; border-radius:999px; color:#d9d9e6}
+
+.timeline{display:grid; gap:18px}
+.t-item{display:grid; grid-template-columns: 140px 1fr; gap: 18px; align-items:start}
+.t-year{color:#b7b7c7; font-weight:700}
+.meta{color:#bdbdcc}
+.dot{padding-left:1rem}
+.dot li{margin:.4rem 0}
+
+.xp + .xp{margin-top:26px}
+.xp header{display:flex; flex-direction:column; gap:6px}
+.xp header span{color:#bcbcd0}
+
+/* ——— Skills ——— */
+.chiplist{display:flex; flex-wrap:wrap; gap:10px; padding-left:0; list-style:none}
+.chiplist li{background:#17171b; padding:.5rem .8rem; border-radius:14px; border:1px solid rgba(255,255,255,.08)}
+
+.lang{margin:14px 0}
+.lang > div:first-child{display:flex; justify-content:space-between; font-weight:600}
+.meter{height:8px; background:#1a1a22; border-radius:999px; overflow:hidden; border:1px solid rgba(255,255,255,.06)}
+.meter span{display:block; height:100%; background:linear-gradient(90deg, var(--accent), var(--accent-2))}
+
+/* ——— Awards ——— */
+.cards{display:grid; gap:14px; padding-left:0; list-style:none}
+.cards.three{grid-template-columns: repeat(auto-fit, minmax(220px,1fr))}
+
+/* ——— Contact ——— */
+.contact .contact-grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:12px}
+.contact-card{
+  display:flex; align-items:center; gap:10px;
+  background: var(--card);
+  border:1px solid rgba(255,255,255,.08);
+  padding:14px 16px; border-radius:16px; color:var(--text); text-decoration:none;
+}
+.contact-card .icon{font-size:20px}
+
+/* ——— Footer ——— */
+.site-foot{border-top:1px solid rgba(255,255,255,.06); padding: 24px 0; color:#b9b9c4}
+
+/* ——— Animations ——— */
+[data-animate]{opacity:0; transform: translateY(12px); transition: opacity .7s ease, transform .7s ease}
+[data-animate].in{opacity:1; transform:none}
+
+/* ——— Light mode ——— */
+html.light body{ background: #fafafc; color:#0d0d14 }
+html.light{
+  --text: #0d0d14;
+  --muted: #3c3c43;
+  --card: #ffffff;
+}
+html.light .site-nav{ background: rgba(255,255,255,.75); border-bottom:1px solid rgba(10,10,10,.06) }
+html.light .site-foot{ border-top:1px solid rgba(10,10,10,.06) }
+html.light .card, html.light .contact-card{ background:#ffffff; border-color: rgba(0,0,0,.06) }
+html.light .badges li, html.light .chiplist li{ background:#f2f2f7; border-color: rgba(0,0,0,.06); color:#18181b }
+html.light .eyebrow{ color:#6a6a6f }
+html.light .sub{ color:#3c3c43 }
+html.light .panel.alt{ background: linear-gradient(180deg, rgba(0,0,0,.03), transparent) }
+
+/* Ensure key items readable in light mode */
+html.light .brand{ color:#0d0d14; }
+html.light .site-nav nav a{ color: var(--muted); }
+html.light .site-nav nav a:hover{ color: var(--text); }
+html.light .mode-toggle{ color:var(--text); border-color: rgba(0,0,0,.12); }
+html.light .contact-card{ color: var(--text); }

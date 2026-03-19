@@ -9,6 +9,9 @@
     content="Yeoh Yee Peng — Digital marketer & aspiring Customer Success Manager. Portfolio and résumé." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='black'/><text x='50' y='62' font-size='56' text-anchor='middle' fill='white' font-family='sans-serif'>Y</text></svg>">
@@ -22,6 +25,7 @@
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#awards">Awards</a>
         <a href="#contact" class="cta">Contact</a>
@@ -30,14 +34,53 @@
         <span class="sun" aria-hidden="true">☼</span>
         <span class="moon" aria-hidden="true">◐</span>
       </button>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="mobile-nav__backdrop"></div>
+    <div class="mobile-nav__content">
+      <div class="mobile-nav__header">
+        <span class="mobile-nav__brand">Yee Peng</span>
+      </div>
+      <nav class="mobile-nav__links">
+        <a href="#about" class="mobile-nav__link" data-nav-index="0">About</a>
+        <a href="#education" class="mobile-nav__link" data-nav-index="1">Education</a>
+        <a href="#experience" class="mobile-nav__link" data-nav-index="2">Experience</a>
+        <a href="#projects" class="mobile-nav__link" data-nav-index="3">Projects</a>
+        <a href="#skills" class="mobile-nav__link" data-nav-index="4">Skills</a>
+        <a href="#awards" class="mobile-nav__link" data-nav-index="5">Awards</a>
+        <a href="#contact" class="mobile-nav__link mobile-nav__link--cta" data-nav-index="6">Contact</a>
+      </nav>
+      <div class="mobile-nav__footer">
+        <button class="mobile-nav__theme-toggle" aria-label="Toggle dark mode">
+          <span class="sun" aria-hidden="true">☼</span>
+          <span class="moon" aria-hidden="true">◐</span>
+          <span class="toggle-label">Toggle Theme</span>
+        </button>
+        <div class="mobile-nav__contact">
+          <a href="mailto:yeepeng030627@gmail.com" class="mobile-nav__contact-link">
+            <span class="icon">✉</span>
+            <span>yeepeng030627@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <main id="top">
     <!-- HERO -->
     <section class="hero panel" data-parallax data-animate>
       <div class="container hero-inner">
-        <p class="kicker">Portfolio · 2025</p>
+        <p class="kicker">Portfolio · 2026</p>
         <h1 class="display">YEOH<br />YEE&nbsp;PENG</h1>
         <p class="sub">
           Self‑motivated digital marketer with hands‑on experience in social media content,
@@ -58,7 +101,7 @@
             </defs>
             <rect x="5" y="5" rx="68" ry="68" width="380" height="834" class="body" />
             <rect x="20" y="85" rx="42" ry="42" width="350" height="739" class="screen" />
-            <image href="assets/images/images.png" x="20" y="85" width="350" height="739"
+            <image href="assets/images/yyp_photo.png" x="35" y="100" width="320" height="710"
               preserveAspectRatio="xMidYMid slice" clip-path="url(#screen-clip)" />
             <rect x="170" y="22" rx="8" ry="8" width="50" height="8" class="notch" />
           </svg>
@@ -97,7 +140,7 @@
           </article>
           <article class="card">
             <h4>Toolbox</h4>
-            <p>CapCut, Canva, Meta Ads Manager, basic HTML/CSS/JS.</p>
+            <p>CapCut, Canva, Meta Ads Manager, TikTok, Instagram, Rednote (Xiaohongshu).</p>
           </article>
         </div>
       </div>
@@ -109,15 +152,15 @@
         <h2 class="eyebrow">Education</h2>
         <div class="timeline">
           <div class="t-item">
-            <div class="t-year">2024—Present</div>
+            <div class="t-year">2024—2026</div>
             <div class="t-body">
               <h3>Bachelor in Marketing (Hons)</h3>
               <p>Tunku Abdul Rahman University of Management and Technology</p>
-              <p class="meta">CGPA: 3.7</p>
+              <p class="meta">CGPA: 3.69</p>
               <ul class="dot">
-                <li>Social Commerce</li>
+                <li>AI and Digital Marketing</li>
                 <li>International Marketing Strategy</li>
-                <li>Operational Management</li>
+                <li>Product Innovation</li>
               </ul>
             </div>
           </div>
@@ -145,25 +188,25 @@
 
         <article class="xp">
           <header>
-            <h3>Part‑Time Digital Marketing</h3>
-            <span>Perfect Skin · Bukit Jalil, Kuala Lumpur · Aug 2024—Current</span>
+            <h3>KOL Marketing Intern</h3>
+            <span>Ads On Marketing · Cheras, Selangor · Oct 2025—Jan 2026</span>
           </header>
           <ul class="dot">
-            <li>Created engaging content for Xiao Hong Shu and Instagram.</li>
-            <li>Used video content to enhance engagement and retention.</li>
-            <li>Monitored and responded to feedback to improve brand image.</li>
+            <li>Assisted in content planning and execution for KOL marketing campaigns.</li>
+            <li>Prepared campaign performance reports for client review.</li>
+            <li>Supported team during on-site marketing events.</li>
           </ul>
         </article>
 
         <article class="xp">
           <header>
-            <h3>Part‑Time Customer Service</h3>
-            <span>Urban Hygienist · George Town, Penang · Aug 2023—Nov 2023</span>
+            <h3>Part‑Time Digital Marketing</h3>
+            <span>Perfect Skin · Bukit Jalil, Kuala Lumpur · Aug 2024—Oct 2025</span>
           </header>
           <ul class="dot">
-            <li>Collected and reported customer feedback to improve services.</li>
-            <li>Managed calls and scheduled appointments.</li>
-            <li>Handled complaints and inquiries to ensure satisfaction.</li>
+            <li>Created engaging content for Xiao Hong Shu and Instagram.</li>
+            <li>Utilized video content effectively to enhance viewer engagement and retention across platforms.</li>
+            <li>Enhanced company image through strategic monitoring and response to social media feedback.</li>
           </ul>
         </article>
 
@@ -173,11 +216,155 @@
             <span>Evon Secret · Greenlane, Penang · Feb 2023—Aug 2023</span>
           </header>
           <ul class="dot">
-            <li>Engaged audiences during live sessions; responded to comments.</li>
-            <li>Supported the host, resolving technical issues in real time.</li>
-            <li>Designed and promoted social channels and website to elevate the brand.</li>
+            <li>Facilitated audience engagement by responding to comments, answering questions, and keeping conversations positive and on-topic.</li>
+            <li>Provided seamless support to the live host in real-time, including managing technical issues or questions that arise during sessions.</li>
+            <li>Elevated brand by designing and promoting Facebook, Instagram, and website, creating an exceptional shopping experience.</li>
           </ul>
         </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="panel alt" data-animate>
+      <div class="container">
+        <h2 class="eyebrow">Projects</h2>
+        <p class="section-intro">A selection of projects showcasing my expertise in digital marketing, influencer
+          collaboration, and social media content creation.</p>
+
+        <!-- ROW 1: University Project -->
+        <div class="project-category">
+          <div class="category-header">
+            <h3 class="category-title">University Project</h3>
+            <div class="category-line"></div>
+          </div>
+
+          <div class="projects-grid projects-grid--two">
+            <!-- Card 1: Diploma Project -->
+            <article class="project-card">
+              <div class="project-card-inner">
+                <span class="sublabel">Diploma Project</span>
+                <h4 class="project-title">Timzizi Dessert</h4>
+                <p class="project-description">Setting up an online business to sell dessert products using ibell
+                  platform. Managed the brand's Instagram presence with posts and reels.</p>
+                <span class="platform-badge platform-badge--instagram">Instagram</span>
+                <a href="https://instagram.com/timzizi_dessert/" target="_blank" rel="noopener noreferrer"
+                  class="project-link">View Project <span class="link-arrow">→</span></a>
+              </div>
+            </article>
+
+            <!-- Card 2: Degree Project -->
+            <article class="project-card">
+              <div class="project-card-inner">
+                <span class="sublabel">Degree Project</span>
+                <h4 class="project-title">Yooca Playground</h4>
+                <p class="project-description">AI and digital marketing project to promote a pre-launch game. Created
+                  content riding trends to generate buzz.</p>
+                <span class="platform-badge platform-badge--instagram">Instagram Reels</span>
+                <a href="https://www.instagram.com/yoocaplayground/reels/" target="_blank" rel="noopener noreferrer"
+                  class="project-link">View Project <span class="link-arrow">→</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ROW 2: Internship Project -->
+        <div class="project-category">
+          <div class="category-header">
+            <h3 class="category-title">Internship Project</h3>
+            <div class="category-line"></div>
+          </div>
+
+          <div class="projects-grid projects-grid--multi">
+            <article class="project-card">
+              <div class="project-card-inner">
+                <h4 class="project-title">Souper Tang x Jestinna Kuan</h4>
+                <p class="project-description">Collaborated with mega influencer Jestinna Kuan on the Souper Tang
+                  Chinese New Year campaign.</p>
+                <span class="platform-badge platform-badge--instagram">Instagram</span>
+                <a href="https://www.instagram.com/reel/DUF_dChks_T/?igsh=enhiZWx0c25yZnAz" target="_blank"
+                  rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-inner">
+                <h4 class="project-title">Souper Tang x Rednote KOC (1)</h4>
+                <p class="project-description">Managed collaboration with Rednote's KOCs for Souper Tang CNY campaign.
+                </p>
+                <span class="platform-badge platform-badge--xhs">Xiaohongshu</span>
+                <a href="https://www.xiaohongshu.com/explore/697b2dc5000000001a0250df?app_platform=ios&app_version=9.19.5&share_from_user_hidden=true&xsec_source=app_share&type=video&xsec_token=CBEhJK_V8Y2wiNYglwrM2G-UQEaB7e2ogMevhcrNFIZTo=&author_share=1&xhsshare=CopyLink&shareRedId=ODo3ODlHSEo2NzUyOTgwNjdJOTo0S0c6&apptime=1772423280&share_id=9075763b06349f79ca274f458fc9217"
+                  target="_blank" rel="noopener noreferrer" class="project-link">View Project <span
+                    class="link-arrow">→</span></a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-inner">
+                <h4 class="project-title">Souper Tang x Rednote KOC (2)</h4>
+                <p class="project-description">Continued KOC collaboration for Souper Tang CNY campaign on Xiaohongshu.
+                </p>
+                <span class="platform-badge platform-badge--xhs">Xiaohongshu</span>
+                <a href="https://www.xiaohongshu.com/explore/697ddef300000002102a34f?app_platform=ios&app_version=9.19.1&share_from_user_hidden=true&xsec_source=app_share&type=video&xsec_token=BOk3tEK84mo6ofXiD8tLFJfOb2fegdb3zWqWndlGFE=&author_share=1&xhsshare=CopyLink&shareRedId=ODo0OUk7PUI5NzFLvOTgwNjY0OThHN0w3&apptime=1769918417&share_id=15hf447"
+                  target="_blank" rel="noopener noreferrer" class="project-link">View Project <span
+                    class="link-arrow">→</span></a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-inner">
+                <h4 class="project-title">Bio-essence x jesline510</h4>
+                <p class="project-description">Bio-essence Bio-Bright series product review video with Instagram
+                  influencer jesline510. (Dec 2025)</p>
+                <span class="platform-badge platform-badge--instagram">Instagram Reels</span>
+                <a href="https://www.instagram.com/reel/DSMzXTUk5CB/?igsh=YTBwbXJjYnRzbXc1" target="_blank"
+                  rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-inner">
+                <h4 class="project-title">Bio-essence x shuhan.621</h4>
+                <p class="project-description">Bio-essence Bio-Bright series product review video with Instagram
+                  influencer shuhan.621. (Jan 2026)</p>
+                <span class="platform-badge platform-badge--instagram">Instagram Reels</span>
+                <a href="https://www.instagram.com/reel/DS9z2F7D7uD/" target="_blank" rel="noopener noreferrer"
+                  class="project-link">View Project <span class="link-arrow">→</span></a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-inner">
+                <h4 class="project-title">Bio-essence x KOL (TikTok)</h4>
+                <p class="project-description">Bio-essence Bio-Bright series product review video collaboration on
+                  TikTok. (Dec 2025)</p>
+                <span class="platform-badge platform-badge--tiktok">TikTok</span>
+                <a href="https://www.tiktok.com/@yoursefhiaaa/video/7584775757503810837?_r=1&_t=ZS-92Jc6CE8HXl" target="_blank" rel="noopener noreferrer"
+                  rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ROW 3: Part-time Project -->
+        <div class="project-category">
+          <div class="category-header">
+            <h3 class="category-title">Part-time Project</h3>
+            <div class="category-line"></div>
+          </div>
+
+          <div class="projects-grid projects-grid--full">
+            <article class="project-card project-card--wide">
+              <div class="project-card-inner">
+                <h4 class="project-title">Perfect Skin Wellness</h4>
+                <p class="project-description">Designed Instagram posts and reels for a wellness centre, creating
+                  visually engaging content for health, beauty, and skincare services.</p>
+                <span class="platform-badge platform-badge--instagram">Instagram</span>
+                <a href="https://www.instagram.com/my_perfectskin_wellness/reels/" target="_blank"
+                  rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -195,9 +382,6 @@
             <li>Copywriting</li>
             <li>CapCut</li>
             <li>Canva</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
           </ul>
         </div>
         <div>
@@ -211,8 +395,8 @@
             <div class="meter"><span style="width:60%"></span></div>
           </div>
           <div class="lang">
-            <div><span>Malay</span><em>Intermediate</em></div>
-            <div class="meter"><span style="width:60%"></span></div>
+            <div><span>Malay</span><em>Beginner</em></div>
+            <div class="meter"><span style="width:30%"></span></div>
           </div>
         </div>
       </div>

@@ -18,18 +18,24 @@
 </head>
 
 <body>
-  <header class="site-nav" data-animate>
-    <div class="container">
+  <header class="topbar" id="topbar" data-animate>
+    <div class="container topbar-inner">
       <a href="#top" class="brand">Yee&nbsp;Peng</a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#awards">Awards</a>
-        <a href="#contact" class="cta">Contact</a>
-      </nav>
+      <div class="gooey-nav-container">
+        <nav>
+          <ul class="gooey-nav-list">
+            <li class="active"><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <span class="effect filter"></span>
+        <span class="effect text"></span>
+      </div>
       <button class="mode-toggle" aria-label="Toggle dark mode">
         <span class="sun" aria-hidden="true">☼</span>
         <span class="moon" aria-hidden="true">◐</span>
@@ -130,15 +136,15 @@
           </ul>
         </div>
         <div class="card-list">
-          <article class="card">
+          <article class="card glow-card animated-item" style="transition-delay: 0s">
             <h4>What I do</h4>
             <p>Create engaging content, adapt to trends, and optimize for platform algorithms.</p>
           </article>
-          <article class="card">
+          <article class="card glow-card animated-item" style="transition-delay: 0.1s">
             <h4>How I work</h4>
             <p>Data‑informed, collaborative, and always iterating to boost brand visibility.</p>
           </article>
-          <article class="card">
+          <article class="card glow-card animated-item" style="transition-delay: 0.2s">
             <h4>Toolbox</h4>
             <p>CapCut, Canva, Meta Ads Manager, TikTok, Instagram, Rednote (Xiaohongshu).</p>
           </article>
@@ -151,7 +157,7 @@
       <div class="container">
         <h2 class="eyebrow">Education</h2>
         <div class="timeline">
-          <div class="t-item">
+          <div class="t-item animated-item" style="transition-delay: 0s">
             <div class="t-year">2024—2026</div>
             <div class="t-body">
               <h3>Bachelor in Marketing (Hons)</h3>
@@ -164,7 +170,7 @@
               </ul>
             </div>
           </div>
-          <div class="t-item">
+          <div class="t-item animated-item" style="transition-delay: 0.1s">
             <div class="t-year">2022—2024</div>
             <div class="t-body">
               <h3>Diploma in E‑Marketing</h3>
@@ -186,7 +192,7 @@
       <div class="container">
         <h2 class="eyebrow">Experience</h2>
 
-        <article class="xp">
+        <article class="xp animated-item" style="transition-delay: 0s">
           <header>
             <h3>KOL Marketing Intern</h3>
             <span>Ads On Marketing · Cheras, Selangor · Oct 2025—Jan 2026</span>
@@ -198,7 +204,7 @@
           </ul>
         </article>
 
-        <article class="xp">
+        <article class="xp animated-item" style="transition-delay: 0.1s">
           <header>
             <h3>Part‑Time Digital Marketing</h3>
             <span>Perfect Skin · Bukit Jalil, Kuala Lumpur · Aug 2024—Oct 2025</span>
@@ -210,7 +216,7 @@
           </ul>
         </article>
 
-        <article class="xp">
+        <article class="xp animated-item" style="transition-delay: 0.2s">
           <header>
             <h3>Live Host Assistance</h3>
             <span>Evon Secret · Greenlane, Penang · Feb 2023—Aug 2023</span>
@@ -238,32 +244,51 @@
             <div class="category-line"></div>
           </div>
 
-          <div class="projects-grid projects-grid--two">
-            <!-- Card 1: Diploma Project -->
-            <article class="project-card">
-              <div class="project-card-inner">
-                <span class="sublabel">Diploma Project</span>
-                <h4 class="project-title">Timzizi Dessert</h4>
-                <p class="project-description">Setting up an online business to sell dessert products using ibell
-                  platform. Managed the brand's Instagram presence with posts and reels.</p>
-                <span class="platform-badge platform-badge--instagram">Instagram</span>
-                <a href="https://instagram.com/timzizi_dessert/" target="_blank" rel="noopener noreferrer"
-                  class="project-link">View Project <span class="link-arrow">→</span></a>
-              </div>
-            </article>
+          <div class="carousel-wrapper">
+            <button class="carousel-arrow carousel-arrow--left" aria-label="Scroll left" data-direction="left">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-container">
+              <div class="carousel-track">
+                <!-- Card 1: Timzizi Dessert (Diploma) -->
+                <article class="carousel-card glow-card animated-item" style="transition-delay: 0s">
+                  <div class="carousel-card__image">
+                    <img src="assets/images/projects/project_page_1.png" alt="Timzizi Dessert Instagram page" loading="lazy">
+                  </div>
+                  <div class="carousel-card__content">
+                    <span class="sublabel">Diploma Project</span>
+                    <h4 class="carousel-card__title">Timzizi Dessert</h4>
+                    <p class="carousel-card__desc">Online dessert business on ibell platform with Instagram presence.</p>
+                    <span class="platform-badge platform-badge--instagram">Instagram</span>
+                    <a href="https://instagram.com/timzizi_dessert/" target="_blank" rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+                  </div>
+                </article>
 
-            <!-- Card 2: Degree Project -->
-            <article class="project-card">
-              <div class="project-card-inner">
-                <span class="sublabel">Degree Project</span>
-                <h4 class="project-title">Yooca Playground</h4>
-                <p class="project-description">AI and digital marketing project to promote a pre-launch game. Created
-                  content riding trends to generate buzz.</p>
-                <span class="platform-badge platform-badge--instagram">Instagram Reels</span>
-                <a href="https://www.instagram.com/yoocaplayground/reels/" target="_blank" rel="noopener noreferrer"
-                  class="project-link">View Project <span class="link-arrow">→</span></a>
+                <!-- Card 2: Yooca Playground (Degree) -->
+                <article class="carousel-card glow-card animated-item" style="transition-delay: 0.1s">
+                  <div class="carousel-card__image">
+                    <img src="assets/images/projects/project_page_2.png" alt="Yooca Playground Instagram Reels" loading="lazy">
+                  </div>
+                  <div class="carousel-card__content">
+                    <span class="sublabel">Degree Project</span>
+                    <h4 class="carousel-card__title">Yooca Playground</h4>
+                    <p class="carousel-card__desc">AI and digital marketing project promoting a pre-launch game.</p>
+                    <span class="platform-badge platform-badge--instagram">Instagram Reels</span>
+                    <a href="https://www.instagram.com/yoocaplayground/reels/" target="_blank" rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+                  </div>
+                </article>
               </div>
-            </article>
+              <div class="carousel-progress">
+                <div class="carousel-progress-bar"></div>
+              </div>
+            </div>
+            <button class="carousel-arrow carousel-arrow--right" aria-label="Scroll right" data-direction="right">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -274,74 +299,101 @@
             <div class="category-line"></div>
           </div>
 
-          <div class="projects-grid projects-grid--multi">
-            <article class="project-card">
-              <div class="project-card-inner">
-                <h4 class="project-title">Souper Tang x Jestinna Kuan</h4>
-                <p class="project-description">Collaborated with mega influencer Jestinna Kuan on the Souper Tang
-                  Chinese New Year campaign.</p>
-                <span class="platform-badge platform-badge--instagram">Instagram</span>
-                <a href="https://www.instagram.com/reel/DUF_dChks_T/?igsh=enhiZWx0c25yZnAz" target="_blank"
-                  rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
-              </div>
-            </article>
+          <div class="carousel-wrapper">
+            <button class="carousel-arrow carousel-arrow--left" aria-label="Scroll left" data-direction="left">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-container">
+              <div class="carousel-track">
+                <!-- Card 1: Souper Tang x Jestinna -->
+                <article class="carousel-card glow-card animated-item" style="transition-delay: 0s">
+                  <div class="carousel-card__image">
+                    <img src="assets/images/projects/project_page_3.png" alt="Souper Tang x Jestinna Kuan campaign" loading="lazy">
+                  </div>
+                  <div class="carousel-card__content">
+                    <h4 class="carousel-card__title">Souper Tang x Jestinna Kuan</h4>
+                    <p class="carousel-card__desc">Mega influencer collaboration for CNY campaign.</p>
+                    <span class="platform-badge platform-badge--instagram">Instagram</span>
+                    <a href="https://www.instagram.com/reel/DUF_dChks_T/?igsh=enhiZWx0c25yZnAz" target="_blank" rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+                  </div>
+                </article>
 
-            <article class="project-card">
-              <div class="project-card-inner">
-                <h4 class="project-title">Souper Tang x Rednote KOC (1)</h4>
-                <p class="project-description">Managed collaboration with Rednote's KOCs for Souper Tang CNY campaign.
-                </p>
-                <span class="platform-badge platform-badge--xhs">Xiaohongshu</span>
-                <a href="https://www.xiaohongshu.com/explore/697b2dc5000000001a0250df?app_platform=ios&app_version=9.19.5&share_from_user_hidden=true&xsec_source=app_share&type=video&xsec_token=CBEhJK_V8Y2wiNYglwrM2G-UQEaB7e2ogMevhcrNFIZTo=&author_share=1&xhsshare=CopyLink&shareRedId=ODo3ODlHSEo2NzUyOTgwNjdJOTo0S0c6&apptime=1772423280&share_id=9075763b06349f79ca274f458fc9217"
-                  target="_blank" rel="noopener noreferrer" class="project-link">View Project <span
-                    class="link-arrow">→</span></a>
-              </div>
-            </article>
+                <!-- Card 2: Souper Tang x Rednote KOC 1 -->
+                <article class="carousel-card glow-card animated-item" style="transition-delay: 0.1s">
+                  <div class="carousel-card__image">
+                    <img src="assets/images/projects/project_page_4.png" alt="Souper Tang x Rednote KOC collaboration" loading="lazy">
+                  </div>
+                  <div class="carousel-card__content">
+                    <h4 class="carousel-card__title">Souper Tang x Rednote KOC (1)</h4>
+                    <p class="carousel-card__desc">KOC collaboration for Souper Tang CNY campaign.</p>
+                    <span class="platform-badge platform-badge--xhs">Xiaohongshu</span>
+                    <a href="https://www.xiaohongshu.com/explore/697b2dc5000000001a0250df" target="_blank" rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+                  </div>
+                </article>
 
-            <article class="project-card">
-              <div class="project-card-inner">
-                <h4 class="project-title">Souper Tang x Rednote KOC (2)</h4>
-                <p class="project-description">Continued KOC collaboration for Souper Tang CNY campaign on Xiaohongshu.
-                </p>
-                <span class="platform-badge platform-badge--xhs">Xiaohongshu</span>
-                <a href="https://www.xiaohongshu.com/explore/697ddef300000002102a34f?app_platform=ios&app_version=9.19.1&share_from_user_hidden=true&xsec_source=app_share&type=video&xsec_token=BOk3tEK84mo6ofXiD8tLFJfOb2fegdb3zWqWndlGFE=&author_share=1&xhsshare=CopyLink&shareRedId=ODo0OUk7PUI5NzFLvOTgwNjY0OThHN0w3&apptime=1769918417&share_id=15hf447"
-                  target="_blank" rel="noopener noreferrer" class="project-link">View Project <span
-                    class="link-arrow">→</span></a>
-              </div>
-            </article>
+                <!-- Card 3: Souper Tang x Rednote KOC 2 -->
+                <article class="carousel-card glow-card animated-item" style="transition-delay: 0.2s">
+                  <div class="carousel-card__image">
+                    <img src="assets/images/projects/project_page_5.png" alt="Souper Tang x Rednote KOC collaboration 2" loading="lazy">
+                  </div>
+                  <div class="carousel-card__content">
+                    <h4 class="carousel-card__title">Souper Tang x Rednote KOC (2)</h4>
+                    <p class="carousel-card__desc">Continued KOC collaboration on Xiaohongshu.</p>
+                    <span class="platform-badge platform-badge--xhs">Xiaohongshu</span>
+                    <a href="https://www.xiaohongshu.com/explore/697ddef300000002102a34f" target="_blank" rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+                  </div>
+                </article>
 
-            <article class="project-card">
-              <div class="project-card-inner">
-                <h4 class="project-title">Bio-essence x jesline510</h4>
-                <p class="project-description">Bio-essence Bio-Bright series product review video with Instagram
-                  influencer jesline510. (Dec 2025)</p>
-                <span class="platform-badge platform-badge--instagram">Instagram Reels</span>
-                <a href="https://www.instagram.com/reel/DSMzXTUk5CB/?igsh=YTBwbXJjYnRzbXc1" target="_blank"
-                  rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
-              </div>
-            </article>
+                <!-- Card 4: Bio-essence x jesline510 -->
+                <article class="carousel-card glow-card animated-item" style="transition-delay: 0.3s">
+                  <div class="carousel-card__image">
+                    <img src="assets/images/projects/project_page_6.png" alt="Bio-essence x jesline510 collaboration" loading="lazy">
+                  </div>
+                  <div class="carousel-card__content">
+                    <h4 class="carousel-card__title">Bio-essence x jesline510</h4>
+                    <p class="carousel-card__desc">Bio-Bright series product review with jesline510.</p>
+                    <span class="platform-badge platform-badge--instagram">Instagram Reels</span>
+                    <a href="https://www.instagram.com/reel/DSMzXTUk5CB/?igsh=YTBwbXJjYnRzbXc1" target="_blank" rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+                  </div>
+                </article>
 
-            <article class="project-card">
-              <div class="project-card-inner">
-                <h4 class="project-title">Bio-essence x shuhan.621</h4>
-                <p class="project-description">Bio-essence Bio-Bright series product review video with Instagram
-                  influencer shuhan.621. (Jan 2026)</p>
-                <span class="platform-badge platform-badge--instagram">Instagram Reels</span>
-                <a href="https://www.instagram.com/reel/DS9z2F7D7uD/" target="_blank" rel="noopener noreferrer"
-                  class="project-link">View Project <span class="link-arrow">→</span></a>
-              </div>
-            </article>
+                <!-- Card 5: Bio-essence x shuhan.621 -->
+                <article class="carousel-card glow-card animated-item" style="transition-delay: 0.4s">
+                  <div class="carousel-card__image">
+                    <img src="assets/images/projects/project_page_7.png" alt="Bio-essence x shuhan.621 collaboration" loading="lazy">
+                  </div>
+                  <div class="carousel-card__content">
+                    <h4 class="carousel-card__title">Bio-essence x shuhan.621</h4>
+                    <p class="carousel-card__desc">Bio-Bright series review on Instagram Reels.</p>
+                    <span class="platform-badge platform-badge--instagram">Instagram Reels</span>
+                    <a href="https://www.instagram.com/reel/DS9z2F7D7uD/" target="_blank" rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+                  </div>
+                </article>
 
-            <article class="project-card">
-              <div class="project-card-inner">
-                <h4 class="project-title">Bio-essence x KOL (TikTok)</h4>
-                <p class="project-description">Bio-essence Bio-Bright series product review video collaboration on
-                  TikTok. (Dec 2025)</p>
-                <span class="platform-badge platform-badge--tiktok">TikTok</span>
-                <a href="https://www.tiktok.com/@yoursefhiaaa/video/7584775757503810837?_r=1&_t=ZS-92Jc6CE8HXl" target="_blank" rel="noopener noreferrer"
-                  rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+                <!-- Card 6: Bio-essence x KOL (TikTok) -->
+                <article class="carousel-card glow-card animated-item" style="transition-delay: 0.5s">
+                  <div class="carousel-card__image">
+                    <img src="assets/images/projects/project_page_8.png" alt="Bio-essence x KOL TikTok collaboration" loading="lazy">
+                  </div>
+                  <div class="carousel-card__content">
+                    <h4 class="carousel-card__title">Bio-essence x KOL (TikTok)</h4>
+                    <p class="carousel-card__desc">Bio-Bright Serum review on TikTok.</p>
+                    <span class="platform-badge platform-badge--tiktok">TikTok</span>
+                    <a href="https://www.tiktok.com/@yoursefhiaaa/video/7584775757503810837" target="_blank" rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+                  </div>
+                </article>
               </div>
-            </article>
+              <div class="carousel-progress">
+                <div class="carousel-progress-bar"></div>
+              </div>
+            </div>
+            <button class="carousel-arrow carousel-arrow--right" aria-label="Scroll right" data-direction="right">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -352,17 +404,36 @@
             <div class="category-line"></div>
           </div>
 
-          <div class="projects-grid projects-grid--full">
-            <article class="project-card project-card--wide">
-              <div class="project-card-inner">
-                <h4 class="project-title">Perfect Skin Wellness</h4>
-                <p class="project-description">Designed Instagram posts and reels for a wellness centre, creating
-                  visually engaging content for health, beauty, and skincare services.</p>
-                <span class="platform-badge platform-badge--instagram">Instagram</span>
-                <a href="https://www.instagram.com/my_perfectskin_wellness/reels/" target="_blank"
-                  rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+          <div class="carousel-wrapper">
+            <button class="carousel-arrow carousel-arrow--left" aria-label="Scroll left" data-direction="left">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-container">
+              <div class="carousel-track">
+                <!-- Card 1: Perfect Skin Wellness -->
+                <article class="carousel-card glow-card animated-item" style="transition-delay: 0s">
+                  <div class="carousel-card__image">
+                    <img src="assets/images/projects/project_page_9.png" alt="Perfect Skin Wellness Instagram content" loading="lazy">
+                  </div>
+                  <div class="carousel-card__content">
+                    <h4 class="carousel-card__title">Perfect Skin Wellness</h4>
+                    <p class="carousel-card__desc">Instagram posts and reels for a wellness centre.</p>
+                    <span class="platform-badge platform-badge--instagram">Instagram</span>
+                    <a href="https://www.instagram.com/my_perfectskin_wellness/reels/" target="_blank" rel="noopener noreferrer" class="project-link">View Project <span class="link-arrow">→</span></a>
+                  </div>
+                </article>
               </div>
-            </article>
+              <div class="carousel-progress">
+                <div class="carousel-progress-bar"></div>
+              </div>
+            </div>
+            <button class="carousel-arrow carousel-arrow--right" aria-label="Scroll right" data-direction="right">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -374,27 +445,27 @@
         <div>
           <h2 class="eyebrow">Skills</h2>
           <ul class="chiplist">
-            <li>Social Media Strategy</li>
-            <li>Meta Ads (Paid & Organic)</li>
-            <li>Live Streaming & Engagement</li>
-            <li>Customer Communication</li>
-            <li>Content Creation</li>
-            <li>Copywriting</li>
-            <li>CapCut</li>
-            <li>Canva</li>
+            <li class="animated-item" style="transition-delay: 0s">Social Media Strategy</li>
+            <li class="animated-item" style="transition-delay: 0.1s">Meta Ads (Paid & Organic)</li>
+            <li class="animated-item" style="transition-delay: 0.2s">Live Streaming & Engagement</li>
+            <li class="animated-item" style="transition-delay: 0.3s">Customer Communication</li>
+            <li class="animated-item" style="transition-delay: 0.4s">Content Creation</li>
+            <li class="animated-item" style="transition-delay: 0.5s">Copywriting</li>
+            <li class="animated-item" style="transition-delay: 0.6s">CapCut</li>
+            <li class="animated-item" style="transition-delay: 0.7s">Canva</li>
           </ul>
         </div>
         <div>
           <h2 class="eyebrow">Languages</h2>
-          <div class="lang">
+          <div class="lang animated-item" style="transition-delay: 0s">
             <div><span>Mandarin</span><em>Proficient</em></div>
             <div class="meter"><span style="width:95%"></span></div>
           </div>
-          <div class="lang">
+          <div class="lang animated-item" style="transition-delay: 0.1s">
             <div><span>English</span><em>Intermediate</em></div>
             <div class="meter"><span style="width:60%"></span></div>
           </div>
-          <div class="lang">
+          <div class="lang animated-item" style="transition-delay: 0.2s">
             <div><span>Malay</span><em>Beginner</em></div>
             <div class="meter"><span style="width:30%"></span></div>
           </div>
@@ -407,15 +478,15 @@
       <div class="container">
         <h2 class="eyebrow">Awards</h2>
         <ul class="cards three">
-          <li class="card">
-            <h3>President’s List</h3>
+          <li class="card glow-card animated-item" style="transition-delay: 0s">
+            <h3>President's List</h3>
             <p>Academic excellence recognition.</p>
           </li>
-          <li class="card">
+          <li class="card glow-card animated-item" style="transition-delay: 0.1s">
             <h3>TAR UMT Soft‑skill Competency Gold</h3>
             <p>Outstanding soft skills and leadership.</p>
           </li>
-
+        
         </ul>
       </div>
     </section>
@@ -425,15 +496,15 @@
       <div class="container">
         <h2 class="eyebrow">Contact</h2>
         <div class="contact-grid">
-          <a class="contact-card" href="tel:+60164206970">
+          <a class="contact-card glow-card animated-item" style="transition-delay: 0s" href="tel:+60164206970">
             <span class="icon">✆</span>
             <span>016‑420‑6970</span>
           </a>
-          <a class="contact-card" href="mailto:yeepeng030627@gmail.com">
+          <a class="contact-card glow-card animated-item" style="transition-delay: 0.1s" href="mailto:yeepeng030627@gmail.com">
             <span class="icon">✉</span>
             <span>yeepeng030627@gmail.com</span>
           </a>
-          <div class="contact-card">
+          <div class="contact-card glow-card animated-item" style="transition-delay: 0.2s">
             <span class="icon">📍</span>
             <span>Cheras, Selangor</span>
           </div>

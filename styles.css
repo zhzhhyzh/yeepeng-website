@@ -614,14 +614,42 @@ html.dark .topbar {
   border-color: transparent;
 }
 
-/* iPhone silhouette */
-.device-frame{ position:absolute; inset:auto 0 -120px auto; display:flex; justify-content:flex-end; pointer-events:none; }
-.iphone{ width:min(50vw, 380px); filter: drop-shadow(0 40px 80px rgba(0,0,0,.12));}
-.iphone .body{ fill: #e8e8e8; stroke: #d0d0d0; stroke-width:1.2; }
-.iphone .screen{ fill: #ffffff; }
-.iphone defs stop:first-child{ stop-color: #e0e0e0; }
-.iphone defs stop:last-child{ stop-color: #c0c0c0; }
-.iphone .notch{ fill: #b0b0b0; opacity: 0.6; }
+/* iPhone silhouette container */
+.device-frame { 
+  position: absolute; 
+  inset: auto 0 -120px auto; 
+  display: flex; 
+  justify-content: flex-end; 
+  pointer-events: none; 
+}
+
+.iphone { 
+  width: min(50vw, 380px); 
+  /* Deepened shadow parameters for realistic premium lifting depth */
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25));
+}
+
+/* Midnight / Space Gray deep metallic chassis rim */
+.iphone .body { 
+  fill: #1c1c1e; 
+  stroke: #2c2c2e; 
+  stroke-width: 2; 
+}
+
+/* Premium pitch-black absolute display boundary bezel edge */
+.iphone .screen-bezel {
+  fill: #000000;
+}
+
+/* Fallback base color for screen background before resource textures load */
+.iphone .screen { 
+  fill: #111111; 
+}
+
+/* Crisp, solid-black camera pill integration layer */
+.iphone .dynamic-island { 
+  fill: #000000; 
+}
 
 /* ——— Sections ——— */
 .panel{padding: clamp(60px, 14vh, 140px) 0}
